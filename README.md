@@ -1,5 +1,23 @@
-# LAUNCHER STALCRAFT API
-Документация внутреннего HTTP/HTTPS API лаунчера игры.
+# Unofficial Stalcraft API
+Документация внутреннего HTTP/HTTPS API лаунчера и игры.
+
+[http://launcher.stalcraft.net/metrics](https://github.com/Art3mLapa/launcher-stalcraft-api/edit/main/README.md#post-httplauncherstalcraftnetmetrics) - Отправка метрики
+
+[http://launcher.stalcraft.net/listServers](https://github.com/Art3mLapa/launcher-stalcraft-api/edit/main/README.md#get-httplauncherstalcraftnetlistservers) - Информация об онлайне в игре
+
+[http://tracker1.stalcraft.net | http://tracker2.stalcraft.net](https://github.com/Art3mLapa/launcher-stalcraft-api/edit/main/README.md#get-httptracker1stalcraftnet-----httptracker2stalcraftnet) - Torrent-трекеры
+
+[http://launcher.stalcraft.net/joinGame](https://github.com/Art3mLapa/launcher-stalcraft-api/edit/main/README.md#get-httplauncherstalcraftnetjoingame)
+
+[http://launcher.stalcraft.net/torrentData](https://github.com/Art3mLapa/launcher-stalcraft-api/edit/main/README.md#get-httplauncherstalcraftnettorrentdata)
+
+[https://backend.stalcraftx.ru/session/game](https://github.com/Art3mLapa/launcher-stalcraft-api/edit/main/README.md#post-httpsbackendstalcraftxrusessiongame) 
+
+[https://backend.stalcraftx.ru/address_list](https://github.com/Art3mLapa/launcher-stalcraft-api/edit/main/README.md#get-httpsbackendstalcraftxruaddress_list) - Список IP-адресов игровых серверов
+
+[https://backend.stalcraftx.ru/characters/list](https://github.com/Art3mLapa/launcher-stalcraft-api/edit/main/README.md#get-httpsbackendstalcraftxrucharacterslist)
+
+[https://stalcraft.net/webhook/region](https://github.com/Art3mLapa/launcher-stalcraft-api/edit/main/README.md#get-httpsstalcraftnetwebhookregion)
 
 ## POST http://launcher.stalcraft.net/metrics
 Ссылка, отвечающая за отправку метрики игрока для аналитики.
@@ -101,7 +119,7 @@
 Пример ссылки с правильными параметрами:
 - ```http://launcher.stalcraft.net/listServers?full=false&token=11111111-2222-3333-4444-555555555555&login=User```
 
-## http://tracker1.stalcraft.net  |   http://tracker2.stalcraft.net
+## GET http://tracker1.stalcraft.net  |   http://tracker2.stalcraft.net
 Torrent трекеры, используются для скачивания и раздачи файлов игры через файл `stalcraft.torrent.bin`
 
 Имеет параметры:
@@ -115,3 +133,201 @@ Torrent трекеры, используются для скачивания и 
 
 Пример ссылки с правильными параметрами:
 ```http://tracker1.stalcraft.net:6767/announce?info_hash=%af%1e%3d%ad%25j%b7%0d%bcrH0Z%a8%d3%a68%3c%27%7b&peer_id=-LT12J0-nMr-gyluoL.3&port=52580&uploaded=0&downloaded=0&left=292552704&corrupt=0&key=C87A7012&event=paused&numwant=200&compact=1&no_peer_id=1&supportcrypto=1&redundant=0```
+
+## GET http://launcher.stalcraft.net/joinGame
+Ссылка, которая вызывается при входе в игру.
+
+Имеет параметры:
+- `token=11111111-2222-3333-4444-555555555555` - Токен пользователя EXBO (не токен с реестра!)
+- `login=User`- Логин пользователя EXBO
+- `protocol_version=3` - Версия сетевого протокола
+
+Пример ссылки с правильными параметрами:
+```http://launcher.stalcraft.net/joinGame?token=11111111-2222-3333-4444-555555555555&login=User&protocol_version=3```
+
+## GET http://launcher.stalcraft.net/torrentData
+Ссылка, отвечающая за подкачку Torrent-содержимого, которая вызывается во время игры.
+
+Имеет параметры:
+- `id=stalcraft`- ID сервера на который произошел вход
+- `token=11111111-2222-3333-4444-555555555555` - Токен пользователя EXBO (не токен с реестра!)
+- `login=User`- Логин пользователя EXBO
+
+Пример ссылки с правильными параметрами:
+```http://launcher.stalcraft.net/torrentData?id=stalcraft&token=11111111-2222-3333-4444-555555555555&login=User```
+
+## POST https://backend.stalcraftx.ru/session/game
+Ссылка, отвечающая за получение ключей для доступа к backend.stalcraft.ru.
+
+Имеет параметры:
+- `login=User` - Логин пользователя EXBO
+- `session=wIHhcjLP%abcde123456789009876543211234567890` - Сессия
+- `distributor=EXBO` - Дистрибьютор игры
+- `connectPubKey=abcdeedcba123456789009887654321%3D` - Ключ для подключения
+
+## GET https://backend.stalcraftx.ru/address_list
+Ссылка, отвечающая за выдачу список IP адресов всех доступных игровых серверов.
+
+Пример ответа:
+```json
+{
+   "clientToTunnelRttWeight" : 1,000000000000000,
+   "mode" : "roxy",
+   "pools" : [
+      {
+         "name" : "CLOUD-RU-7",
+         "tunnels" : [
+            {
+               "address" : "111.222.33.444:12345",
+               "name" : "SRVMGR-ACCESSOR-OFT-RU-7A"
+            }
+         ]
+      },
+      {
+         "name" : "MSK2",
+         "tunnels" : [
+            {
+               "address" : "111.222.33.444:12345",
+               "name" : "MSK2-1"
+            },
+            ...
+            {
+               "address" : "111.222.33.444:12345",
+               "name" : "MSK2-16"
+            }
+         ]
+      },
+      ...
+            }
+         ]
+      }
+   ]
+}
+```
+
+Имеет параметры:
+- `login=User` - Логин пользователя EXBO
+
+Пример ссылки с правильными параметрами:
+```https://backend.stalcraftx.ru/address_list?login=User```
+
+## GET https://backend.stalcraftx.ru/characters/list
+Ссылка, которая выдаёт очень много технической информации об персонажах на аккаунте
+
+Пример ответа:
+```json
+{
+   "accepted_legal_version" : "v8_ru_launcher",
+   "characters" : [
+      {
+         "allianceId" : "freedom",
+         "armor" : {
+            "Count_i" : {
+               "type" : "integer",
+               "value" : 1
+            },
+            "Damage" : {
+               "type" : "short",
+               "value" : 0
+            },
+            "id" : {
+               "type" : "short",
+               "value" : 25352
+            },
+            "s_hasUuid" : {
+               "type" : "byte",
+               "value" : 1
+            },
+            "s_uuidL" : {
+               "type" : "long",
+               "value" : -6387157833297061400
+            },
+            "s_uuidM" : {
+               "type" : "long",
+               "value" : 946651913389492576
+            },
+            "tag" : {
+            ...
+            },
+                  "owner" : {
+                     "type" : "string",
+                     "value" : "User"
+                  },
+                  "sm" : {
+                     "type" : "string",
+                     "value" : ""
+                  },
+                  "src" : {
+                     "type" : "byte",
+                     "value" : 22
+                  },
+                  "u1" : {
+                     "type" : "long",
+                     "value" : 6737737881701861134
+                  },
+                  "u2" : {
+                     "type" : "long",
+                     "value" : -6489271771595462926
+                  }
+               }
+            }
+         },
+         "clan" : "????????? ?????",
+         "clanIcon" : {
+            "color" : {
+               "type" : "integer",
+               "value" : -12324269
+            },
+            "icon" : {
+               "type" : "string",
+               "value" : "freedom"
+            }
+         },
+         "gearScore" : 756,
+         "isLegacy" : false,
+         "lastLogin" : 1755092351744,
+         "locationUnlocalized" : "location.base_freedom.name",
+         "maxGearScore" : 1486,
+         "money" : 372937,
+         "playedTime" : 3254772226,
+     ...
+   ],
+   "characters_limit" : 10,
+   "had_characters" : true,
+   "reserved_names" : []
+}
+```
+
+Имеет параметры:
+- `login=User` - Логин пользователя EXBO
+- `session=abcde123456789009876543211234567890` - Сессия
+- `distributor=EXBO` - Дистрибьютор игры
+
+Пример ссылки с правильными параметрами:
+```https://backend.stalcraftx.ru/characters/list?login=User&session=abcde12345678900988765432112345678900987654321234567890253D&distributor=EXBO```
+
+## GET https://stalcraft.net/webhook/region
+Ссылка которая отображает IP и местоположение пользователя
+
+Пример ответа:
+```json
+{
+   "country" : {
+      "default_game_region" : "RU",
+      "id" : "RU",
+      "name" : "Россия",
+      "native_name" : "Россия"
+   },
+   "ip" : "111.222.333.444",
+   "region" : {
+      "default_lang" : "ru",
+      "id" : "RU"
+   }
+}
+```
+
+## Благодарность
+
+Анализ и поиск ссылок - [HTTP Debugger](https://httpdebugger.com/)
+
+Некоторая информация об ссылках - [@oarer](https://github.com/oarer)
