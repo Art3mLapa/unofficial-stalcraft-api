@@ -2,23 +2,23 @@
 # <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/icon_logo.png" width="5%" height="5%"> Unofficial Stalcraft API
 Документация внутреннего HTTP/HTTPS API лаунчера и игры.
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/post_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/metrics](https://github.com/Art3mLapa/launcher-stalcraft-api/edit/main/README.md#post-httplauncherstalcraftnetmetrics) - Отправка метрики
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/post_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/metrics](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetmetrics) - Отправка метрики
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/listServers](https://github.com/Art3mLapa/launcher-stalcraft-api/edit/main/README.md#get-httplauncherstalcraftnetlistservers) - Информация об онлайне в игре
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/listServers](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#get-httplauncherstalcraftnetlistservers) - Информация об онлайне в игре
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://tracker1.stalcraft.net | http://tracker2.stalcraft.net](https://github.com/Art3mLapa/launcher-stalcraft-api/edit/main/README.md#get-httptracker1stalcraftnet-----httptracker2stalcraftnet) - Torrent-трекеры
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://tracker1.stalcraft.net | http://tracker2.stalcraft.net](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#get-httptracker1stalcraftnet-----httptracker2stalcraftnet) - Torrent-трекеры
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/joinGame](https://github.com/Art3mLapa/launcher-stalcraft-api/edit/main/README.md#get-httplauncherstalcraftnetjoingame)
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/joinGame](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#get-httplauncherstalcraftnetjoingame)
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/torrentData](https://github.com/Art3mLapa/launcher-stalcraft-api/edit/main/README.md#get-httplauncherstalcraftnettorrentdata)
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/torrentData](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#get-httplauncherstalcraftnettorrentdata)
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/post_logo.png" width="2%" height="2%"> [https://backend.stalcraftx.ru/session/game](https://github.com/Art3mLapa/launcher-stalcraft-api/edit/main/README.md#post-httpsbackendstalcraftxrusessiongame) 
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/post_logo.png" width="2%" height="2%"> [https://backend.stalcraftx.ru/session/game](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#post-httpsbackendstalcraftxrusessiongame) 
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [https://backend.stalcraftx.ru/address_list](https://github.com/Art3mLapa/launcher-stalcraft-api/edit/main/README.md#get-httpsbackendstalcraftxruaddress_list) - Список IP-адресов игровых серверов
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [https://backend.stalcraftx.ru/address_list](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#get-httpsbackendstalcraftxruaddress_list) - Список IP-адресов игровых серверов
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [https://backend.stalcraftx.ru/characters/list](https://github.com/Art3mLapa/launcher-stalcraft-api/edit/main/README.md#get-httpsbackendstalcraftxrucharacterslist)
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [https://backend.stalcraftx.ru/characters/list](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#get-httpsbackendstalcraftxrucharacterslist)
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [https://stalcraft.net/webhook/region](https://github.com/Art3mLapa/launcher-stalcraft-api/edit/main/README.md#get-httpsstalcraftnetwebhookregion)
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [https://stalcraft.net/webhook/region](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#get-httpsstalcraftnetwebhookregion)
 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/post_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/metrics
 Ссылка, отвечающая за отправку метрики игрока для аналитики.
