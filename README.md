@@ -133,7 +133,7 @@ Torrent трекеры, используются для скачивания и 
 - `numwant=200` `compact=1` `no_peer_id=1` `supportcrypto=1` `redundant=0` - Прочая информация, необходимая для трекера
 
 Пример ссылки с правильными параметрами:
-```http://tracker1.stalcraft.net:6767/announce?info_hash=%af%1e%3d%ad%25j%b7%0d%bcrH0Z%a8%d3%a68%3c%27%7b&peer_id=-LT12J0-nMr-gyluoL.3&port=52580&uploaded=0&downloaded=0&left=292552704&corrupt=0&key=C87A7012&event=paused&numwant=200&compact=1&no_peer_id=1&supportcrypto=1&redundant=0```
+- ```http://tracker1.stalcraft.net:6767/announce?info_hash=%af%1e%3d%ad%25j%b7%0d%bcrH0Z%a8%d3%a68%3c%27%7b&peer_id=-LT12J0-nMr-gyluoL.3&port=52580&uploaded=0&downloaded=0&left=292552704&corrupt=0&key=C87A7012&event=paused&numwant=200&compact=1&no_peer_id=1&supportcrypto=1&redundant=0```
 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/joinGame
 Ссылка, которая вызывается при входе в игру.
@@ -144,7 +144,7 @@ Torrent трекеры, используются для скачивания и 
 - `protocol_version=3` - Версия сетевого протокола
 
 Пример ссылки с правильными параметрами:
-```http://launcher.stalcraft.net/joinGame?token=11111111-2222-3333-4444-555555555555&login=User&protocol_version=3```
+- ```http://launcher.stalcraft.net/joinGame?token=11111111-2222-3333-4444-555555555555&login=User&protocol_version=3```
 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/torrentData
 Ссылка, отвечающая за подкачку Torrent-содержимого, которая вызывается во время игры.
@@ -155,7 +155,7 @@ Torrent трекеры, используются для скачивания и 
 - `login=User`- Логин пользователя EXBO
 
 Пример ссылки с правильными параметрами:
-```http://launcher.stalcraft.net/torrentData?id=stalcraft&token=11111111-2222-3333-4444-555555555555&login=User```
+- ```http://launcher.stalcraft.net/torrentData?id=stalcraft&token=11111111-2222-3333-4444-555555555555&login=User```
 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/post_logo.png" width="5%" height="5%"> https://backend.stalcraftx.ru/session/game
 Ссылка, отвечающая за получение ключей для доступа к backend.stalcraft.ru.
@@ -210,7 +210,7 @@ Torrent трекеры, используются для скачивания и 
 - `login=User` - Логин пользователя EXBO
 
 Пример ссылки с правильными параметрами:
-```https://backend.stalcraftx.ru/address_list?login=User```
+- ```https://backend.stalcraftx.ru/address_list?login=User```
 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> https://backend.stalcraftx.ru/characters/list
 Ссылка, которая выдаёт очень много технической информации об персонажах на аккаунте
@@ -305,7 +305,7 @@ Torrent трекеры, используются для скачивания и 
 - `distributor=EXBO` - Дистрибьютор игры
 
 Пример ссылки с правильными параметрами:
-```https://backend.stalcraftx.ru/characters/list?login=User&session=abcde12345678900988765432112345678900987654321234567890253D&distributor=EXBO```
+- ```https://backend.stalcraftx.ru/characters/list?login=User&session=abcde12345678900988765432112345678900987654321234567890253D&distributor=EXBO```
 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> https://stalcraft.net/webhook/region
 Ссылка которая отображает IP и местоположение пользователя
