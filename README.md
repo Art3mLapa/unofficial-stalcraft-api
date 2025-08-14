@@ -4,6 +4,8 @@
 
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/post_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/metrics](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetmetrics) - Отправка метрики
 
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/test](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnettest)
+
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/listServers](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetlistservers) - Информация об онлайне в игре
 
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://tracker1.stalcraft.net | http://tracker2.stalcraft.net](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httptracker1stalcraftnet-----httptracker2stalcraftnet) - Torrent-трекеры
