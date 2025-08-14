@@ -6,6 +6,10 @@
 
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/test](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnettest)
 
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/launcher?list=true](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetlauncherlisttrue)
+
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/auth](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetauth)
+
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/listServers](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetlistservers) - Информация об онлайне в игре
 
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://tracker1.stalcraft.net | http://tracker2.stalcraft.net](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httptracker1stalcraftnet-----httptracker2stalcraftnet) - Torrent-трекеры
@@ -33,6 +37,58 @@
 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/test
 Ссылка, которая вызывается при открытии лаунчера.
+
+## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/launcher?list=true
+Ссылка для получения хеш-суммы важных технических модулей в лаунчере.
+
+Пример ответа:
+```
+// Размер файла в байтах | Путь к файлу | Хеш-сумма
+
+6122354 native/jlibtorrent.dll 5b1adfe04f083a4d97aa5833f7ca2e9d537b0f73
+179320 native/jmt.dll 21fd89dcd5372c73dec175fd51d295e67c23d576
+203 args.txt f1ab170fc9b07f014c6d56ce11e9656ff387bdd5
+4552962 launcher.jar 7c5b039cce00034993dd1fc544b96bdd29a6677b
+148480 native/registry.dll 26e7733f0bc23c4078f91cb805cd504a8042556a
+230 args_new.txt 19c98f70a11a7ec85d8d0ef05f942e97c7226251
+373280 native/ExboOptimizer.exe d10e42af7d324091e35fe8f12263a04b49db8f47
+```
+
+## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/auth
+Ссылка для авторизации пользователя EXBO в лаунчере. В ответе содержит токен, который используется для запросов на ссылки ниже.
+
+Пример ответа:
+
+```
+{
+  "displayLogin": null,
+  "genericError": null,
+  "licenseAccepted": true,
+  "loginURL": null,
+  "mailAbbreviation": "art***@gmail.com",
+  "newEmail": null,
+  "newEmailHash": null,
+  "secretHash": null,
+  "session": "11111111-2222-3333-4444-555555555555",
+  "timeLeft": -1,
+  "token": "66666666-7777-8888-9999-000000000000",
+  "trueLogin": "User",
+  "type": "OK",
+  "untilChangingFinish": null
+}
+```
+Имеет параметры:
+- `state=false` 
+- `login=User` - Логин пользователя EXBO
+- `session=11111111-2222-3333-4444-555555555555` - Сессия, которая выдаётся из ответа на ссылку
+- `bootstrap=a1b2c3d4a1b2c3d4a1b2c3d4a1b2c3d4` - Код запуска
+- `hwid=abc123abc123abc123abc123abc123abc123abc123abc123abc123abc123` - HWID (HardWare ID) компьютера
+- `protocol_version=3` - Версия сетевого протокола
+- `id=00000000-9999-8888-7777-666666666666` - ID
+- `start=true` 
+
+Пример ссылки с правильными параметрами:
+- ```http://launcher.stalcraft.net/auth?state=false&login=User&session=11111111-2222-3333-4444-555555555555&bootstrap=a1b2c3d4a1b2c3d4a1b2c3d4a1b2c3d4&hwid=abc123abc123abc123abc123abc123abc123abc123abc123abc123abc123&protocol_version=3&id=00000000-9999-8888-7777-666666666666&start=true```
 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/listServers
 Ссылка, отвечающая за получение информации об игровом сервере и игре STALCRAFT, такие как онлайн на сервере, HTTP сиды, размер игры в байтах и т.д.
